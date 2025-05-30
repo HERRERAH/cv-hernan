@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hernan Herrera - CV Infographic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5; /* Light gray background */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .infographic-container {
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .header-section {
+            background-color: #2c3e50; /* Dark blue */
+            color: #ffffff;
+            padding: 40px;
+            text-align: center;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+        .profile-section {
+            padding: 30px;
+            text-align: center;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            padding: 30px;
+        }
+        .left-column, .right-column {
+            flex: 1;
+            padding: 0 15px;
+        }
+        .section-title {
+            font-size: 1.75rem; /* text-2xl */
+            font-weight: 700; /* font-bold */
+            color: #333;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+        .section-item h3 {
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600; /* font-semibold */
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        .section-item p {
+            font-size: 1rem; /* text-base */
+            color: #555;
+        }
+        .section-item ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 10px;
+        }
+        .section-item ul li {
+            margin-bottom: 5px;
+            color: #555;
+        }
+        .section-item ul li::before {
+            content: "\f00c"; /* Checkmark icon */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: #28a745; /* Green */
+            margin-right: 8px;
+        }
+        .contact-info p {
+            margin-bottom: 5px;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        .contact-info i {
+            color: #ffffff;
+        }
+
+        /* Responsive adjustments */
+        @media (min-width: 768px) {
+            .main-content {
+                flex-direction: row;
+            }
+            .left-column {
+                border-right: 1px solid #e0e0e0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="infographic-container">
+        <div class="header-section">
+            <h1 class="text-4xl font-bold mb-2">Hernan Herrera</h1>
+            <p class="text-lg mb-4">Motivated and friendly professional</p>
+            <div class="contact-info text-sm">
+                <p><i class="fas fa-map-marker-alt"></i> Frankfurt am Main, Germany</p>
+                <p><i class="fas fa-phone"></i> +49 1521 2449054</p>
+                <p><i class="fas fa-envelope"></i> herrera.hernan@outlook.com</p>
+            </div>
+        </div>
+
+        <div class="profile-section">
+            <h2 class="section-title justify-center"><i class="fas fa-user-circle"></i> Profile</h2>
+            <p id="profile-text" class="text-base text-gray-700 leading-relaxed max-w-2xl mx-auto">
+                Seeking a part-time or full-time position during the peak season to finance a year of study abroad. Possesses strong customer service skills and the ability to work effectively in fast-paced environments.
+            </p>
+        </div>
+
+        <div class="main-content">
+            <div class="left-column">
+                <div class="work-experience-section mb-8">
+                    <h2 class="section-title"><i class="fas fa-briefcase"></i> Work Experience</h2>
+
+                    <div class="section-item">
+                        <h3>Delivery Driver</h3>
+                        <p>Ubereats, Justo, Rappi | Viña Del Mar, Chile</p>
+                        <p class="text-sm text-gray-500">11/2024 - 01/2025</p>
+                        <ul class="text-sm">
+                            <li>Punctual and reliable delivery of orders.</li>
+                            <li>Ensured customer satisfaction through friendly service.</li>
+                            <li>Efficient route planning and use of the delivery app.</li>
+                        </ul>
+                    </div>
+
+                    <div class="section-item">
+                        <h3>Systems Engineer</h3>
+                        <p>Mutual de Seguridad Asesorías | Providencia, Stgo, CL</p>
+                        <p class="text-sm text-gray-500">10/2023 - 10/2024</p>
+                        <ul class="text-sm">
+                            <li>Maintenance and administration of IT systems.</li>
+                            <li>Troubleshooting and technical support.</li>
+                            <li>Implementation of cybersecurity measures.</li>
+                        </ul>
+                    </div>
+
+                    <div class="section-item">
+                        <h3>Systems Engineer</h3>
+                        <p>Coanil Foundation | Ñuñoa, Santiago, Chile</p>
+                        <p class="text-sm text-gray-500">09/2019 - 10/2023</p>
+                        <ul class="text-sm">
+                            <li>Responsible for system administration and the operation of the IT infrastructure.</li>
+                            <li>Performed system updates and upgrades.</li>
+                            <li>Trained employees in the use of IT systems.</li>
+                        </ul>
+                    </div>
+
+                    <div class="section-item">
+                        <h3>Systems Engineer</h3>
+                        <p>MFO Advisors | Vitacura, Santiago, Chile</p>
+                        <p class="text-sm text-gray-500">09/2018 - 02/2019</p>
+                        <ul class="text-sm">
+                            <li>Migration of whole IT technology to new offices.</li>
+                            <li>Administration and maintenance of IT infrastructure.</li>
+                        </ul>
+                    </div>
+
+                    <div class="section-item">
+                        <h3>Computer Science Course Assistant</h3>
+                        <p>Faculty of Economics and Business - Universidad de Chile | Santiago, Chile</p>
+                        <p class="text-sm text-gray-500">03/2015 - 07/2015</p>
+                        <ul class="text-sm">
+                            <li>Supported the course instructor in student supervision.</li>
+                            <li>Conducted tutorials and evaluated student work.</li>
+                        </ul>
+                    </div>
+
+                    <div class="section-item">
+                        <h3>Sales Executive Claro Hogar</h3>
+                        <p>ECRGROUP for Claro Chile S.A. | Valparaíso, Chile</p>
+                        <p class="text-sm text-gray-500">01/2015 - 02/2015</p>
+                        <ul class="text-sm">
+                            <li>Sale of Claro Hogar products and services.</li>
+                            <li>Customer consultation and preparation of offers.</li>
+                        </ul>
+                    </div>
+
+                    <div class="section-item">
+                        <h3>Mathematics Course Assistant III</h3>
+                        <p>Faculty of Economics and Business - Universidad Chile | Santiago, Chile</p>
+                        <p class="text-sm text-gray-500">03/2014 - 07/2014</p>
+                        <ul class="text-sm">
+                            <li>Supported the course instructor in mathematics.</li>
+                            <li>Conducted tutorials and evaluated student work.</li>
+                        </ul>
+                    </div>
+
+                    <div class="section-item">
+                        <h3>Administrative Assistant</h3>
+                        <p>Restaurant Route 5 | Chañaral, Chile</p>
+                        <p class="text-sm text-gray-500">03/2011 - 02/2012</p>
+                        <ul class="text-sm">
+                            <li>Support in administrative tasks.</li>
+                        </ul>
+                    </div>
+
+                    <div class="section-item">
+                        <h3>Multifunctional Employee</h3>
+                        <p>Hotel Portal Atacama | Chañaral, Chile</p>
+                        <p class="text-sm text-gray-500">03/2010 - 02/2011</p>
+                        <ul class="text-sm">
+                            <li>Various tasks in hotel operations.</li>
+                        </ul>
+                    </div>
+
+                    <div class="section-item">
+                        <h3>Seller</h3>
+                        <p>Herrera Bookstore | Chañaral, Chile</p>
+                        <p class="text-sm text-gray-500">06/2009 - 03/2010</p>
+                        <ul class="text-sm">
+                            <li>Sale of books and stationery, customer advice.</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="education-section mb-8">
+                    <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
+                    <div class="section-item">
+                        <h3>BSc. Management Control and Information Systems Engineering</h3>
+                        <p>Universidad de Chile, Santiago, Chile</p>
+                        <p class="text-sm text-gray-500">2012 - 2018</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-column">
+                <div class="certifications-section mb-8">
+                    <h2 class="section-title"><i class="fas fa-certificate"></i> Certifications & Training</h2>
+                    <div class="section-item">
+                        <h3>Diploma in Cybersecurity Governance, Management, and Audit</h3>
+                        <p>Universidad de Santiago de Chile | Issued Jan 2025</p>
+                    </div>
+                    <div class="section-item">
+                        <h3>Advanced English (IELTS 7.0, C1 CEFR)</h3>
+                        <p>Official Ielts International | 2024</p>
+                    </div>
+                    <div class="section-item">
+                        <h3>Data analysis and management (with Tableau)</h3>
+                        <p>USACH Capacitacion | 2024</p>
+                    </div>
+                    <div class="section-item">
+                        <h3>Microsoft Certified: Azure Fundamentals</h3>
+                        <p>Microsoft | Issued Aug 2023</p>
+                        <p class="text-sm text-gray-500">Credential ID: 3282C3D5C6CB3C30</p>
+                    </div>
+                    <div class="section-item">
+                        <h3>Ubiquiti Enterprise Wireless Admin (UEWA, Wi-fi)</h3>
+                        <p>LK CHILE | 2023</p>
+                    </div>
+                    <div class="section-item">
+                        <h3>Concepts of diversity and inclusion</h3>
+                        <p>COANIL Capacitacion | 2023</p>
+                    </div>
+                    <div class="section-item">
+                        <h3>Chilean Sign Language Level A1</h3>
+                        <p>COANIL Capacitacion | 2023</p>
+                    </div>
+                </div>
+
+                <div class="languages-section mb-8">
+                    <h2 class="section-title"><i class="fas fa-language"></i> Language Skills</h2>
+                    <div class="section-item">
+                        <p><strong>Spanish:</strong> Native speaker</p>
+                        <p><strong>English:</strong> Fluent (C1 CEFR)</p>
+                        <p><strong>German:</strong> Beginner (A1 CEFR)</p>
+                        <p><strong>Portuguese:</strong> Beginner (A1 CEFR)</p>
+                    </div>
+                </div>
+
+                <div class="computer-skills-section mb-8">
+                    <h2 class="section-title"><i class="fas fa-laptop-code"></i> Computer Skills</h2>
+                    <div class="section-item">
+                        <p>Windows and Ubuntu user. MS Office (Word, Excel, PowerPoint), Tableau, etc. Certified Wi-fi Admin enables connectivity troubleshooting.</p>
+                    </div>
+                </div>
+
+                <div class="volunteer-section mb-8">
+                    <h2 class="section-title"><i class="fas fa-hands-helping"></i> Volunteer Activities</h2>
+                    <div class="section-item">
+                        <ul class="text-sm">
+                            <li>A&O Hostels Frankfurt Ost: Multifunctional Volunteer (room check, breakfast, dinner shifts) | May 2025</li>
+                            <li>Gallinaro Accommodation: Webmaster (Website update, etc.) | May 2025</li>
+                            <li>Pfronten Gastehaus: Construction Renovation Assistant (Furniture Assembly, etc.) | April 2025</li>
+                            <li>Chilean Cryptotechnology Association: Partner (2019-2023)</li>
+                            <li>U. of Chile: Information Systems Teaching Assistant (2015)</li>
+                            <li>U. of Chile: Math Teaching Assistant (2014)</li>
+                            <li>Ong Ayllu: Mathematics Tutor (Santiago, Chile. 2013)</li>
+                            <li>BitUChile, U. of Chile: Content Writer (2012)</li>
+                            <li>Liceo Catolico Atacama: Treasurer of Student Union (2010)</li>
+                            <li>Bangdroid: Co-Founder (Physics Student Club, 2009-2011)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
