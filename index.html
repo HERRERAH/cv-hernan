@@ -102,6 +102,33 @@
             color: #ffffff;
         }
 
+        /* Language selector styles */
+        .language-selector {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 15px;
+            background-color: #e0e0e0;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            margin-bottom: 20px;
+        }
+        .lang-button {
+            padding: 8px 15px;
+            border-radius: 8px;
+            background-color: #34495e;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .lang-button:hover {
+            background-color: #2c3e50;
+        }
+        .lang-button.active {
+            background-color: #1abc9c; /* Teal for active */
+        }
+
         /* Responsive adjustments */
         @media (min-width: 768px) {
             .main-content {
@@ -115,18 +142,24 @@
 </head>
 <body>
     <div class="infographic-container">
+        <div class="language-selector">
+            <button class="lang-button active" data-lang="en">English</button>
+            <button class="lang-button" data-lang="de">Deutsch</button>
+            <button class="lang-button" data-lang="es">Español</button>
+        </div>
+
         <div class="header-section">
-            <h1 class="text-4xl font-bold mb-2">Hernan Herrera</h1>
-            <p class="text-lg mb-4">Motivated and friendly professional</p>
+            <h1 class="text-4xl font-bold mb-2" id="header-title">Hernan Herrera</h1>
+            <p class="text-lg mb-4" id="header-subtitle">Motivated and friendly professional</p>
             <div class="contact-info text-sm">
-                <p><i class="fas fa-map-marker-alt"></i> Frankfurt am Main, Germany</p>
-                <p><i class="fas fa-phone"></i> +49 1521 2449054</p>
-                <p><i class="fas fa-envelope"></i> herrera.hernan@outlook.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> <span id="contact-location">Frankfurt am Main, Germany</span></p>
+                <p><i class="fas fa-phone"></i> <span id="contact-phone">+49 1521 2449054</span></p>
+                <p><i class="fas fa-envelope"></i> <span id="contact-email">herrera.hernan@outlook.com</span></p>
             </div>
         </div>
 
         <div class="profile-section">
-            <h2 class="section-title justify-center"><i class="fas fa-user-circle"></i> Profile</h2>
+            <h2 class="section-title justify-center"><i class="fas fa-user-circle"></i> <span id="profile-title">Profile</span></h2>
             <p id="profile-text" class="text-base text-gray-700 leading-relaxed max-w-2xl mx-auto">
                 Seeking a part-time or full-time position during the peak season to finance a year of study abroad. Possesses strong customer service skills and the ability to work effectively in fast-paced environments.
             </p>
@@ -135,190 +168,728 @@
         <div class="main-content">
             <div class="left-column">
                 <div class="work-experience-section mb-8">
-                    <h2 class="section-title"><i class="fas fa-briefcase"></i> Work Experience</h2>
-
-                    <div class="section-item">
-                        <h3>Delivery Driver</h3>
-                        <p>Ubereats, Justo, Rappi | Viña Del Mar, Chile</p>
-                        <p class="text-sm text-gray-500">11/2024 - 01/2025</p>
-                        <ul class="text-sm">
-                            <li>Punctual and reliable delivery of orders.</li>
-                            <li>Ensured customer satisfaction through friendly service.</li>
-                            <li>Efficient route planning and use of the delivery app.</li>
-                        </ul>
-                    </div>
-
-                    <div class="section-item">
-                        <h3>Systems Engineer</h3>
-                        <p>Mutual de Seguridad Asesorías | Providencia, Stgo, CL</p>
-                        <p class="text-sm text-gray-500">10/2023 - 10/2024</p>
-                        <ul class="text-sm">
-                            <li>Maintenance and administration of IT systems.</li>
-                            <li>Troubleshooting and technical support.</li>
-                            <li>Implementation of cybersecurity measures.</li>
-                        </ul>
-                    </div>
-
-                    <div class="section-item">
-                        <h3>Systems Engineer</h3>
-                        <p>Coanil Foundation | Ñuñoa, Santiago, Chile</p>
-                        <p class="text-sm text-gray-500">09/2019 - 10/2023</p>
-                        <ul class="text-sm">
-                            <li>Responsible for system administration and the operation of the IT infrastructure.</li>
-                            <li>Performed system updates and upgrades.</li>
-                            <li>Trained employees in the use of IT systems.</li>
-                        </ul>
-                    </div>
-
-                    <div class="section-item">
-                        <h3>Systems Engineer</h3>
-                        <p>MFO Advisors | Vitacura, Santiago, Chile</p>
-                        <p class="text-sm text-gray-500">09/2018 - 02/2019</p>
-                        <ul class="text-sm">
-                            <li>Migration of whole IT technology to new offices.</li>
-                            <li>Administration and maintenance of IT infrastructure.</li>
-                        </ul>
-                    </div>
-
-                    <div class="section-item">
-                        <h3>Computer Science Course Assistant</h3>
-                        <p>Faculty of Economics and Business - Universidad de Chile | Santiago, Chile</p>
-                        <p class="text-sm text-gray-500">03/2015 - 07/2015</p>
-                        <ul class="text-sm">
-                            <li>Supported the course instructor in student supervision.</li>
-                            <li>Conducted tutorials and evaluated student work.</li>
-                        </ul>
-                    </div>
-
-                    <div class="section-item">
-                        <h3>Sales Executive Claro Hogar</h3>
-                        <p>ECRGROUP for Claro Chile S.A. | Valparaíso, Chile</p>
-                        <p class="text-sm text-gray-500">01/2015 - 02/2015</p>
-                        <ul class="text-sm">
-                            <li>Sale of Claro Hogar products and services.</li>
-                            <li>Customer consultation and preparation of offers.</li>
-                        </ul>
-                    </div>
-
-                    <div class="section-item">
-                        <h3>Mathematics Course Assistant III</h3>
-                        <p>Faculty of Economics and Business - Universidad Chile | Santiago, Chile</p>
-                        <p class="text-sm text-gray-500">03/2014 - 07/2014</p>
-                        <ul class="text-sm">
-                            <li>Supported the course instructor in mathematics.</li>
-                            <li>Conducted tutorials and evaluated student work.</li>
-                        </ul>
-                    </div>
-
-                    <div class="section-item">
-                        <h3>Administrative Assistant</h3>
-                        <p>Restaurant Route 5 | Chañaral, Chile</p>
-                        <p class="text-sm text-gray-500">03/2011 - 02/2012</p>
-                        <ul class="text-sm">
-                            <li>Support in administrative tasks.</li>
-                        </ul>
-                    </div>
-
-                    <div class="section-item">
-                        <h3>Multifunctional Employee</h3>
-                        <p>Hotel Portal Atacama | Chañaral, Chile</p>
-                        <p class="text-sm text-gray-500">03/2010 - 02/2011</p>
-                        <ul class="text-sm">
-                            <li>Various tasks in hotel operations.</li>
-                        </ul>
-                    </div>
-
-                    <div class="section-item">
-                        <h3>Seller</h3>
-                        <p>Herrera Bookstore | Chañaral, Chile</p>
-                        <p class="text-sm text-gray-500">06/2009 - 03/2010</p>
-                        <ul class="text-sm">
-                            <li>Sale of books and stationery, customer advice.</li>
-                        </ul>
-                    </div>
-
+                    <h2 class="section-title"><i class="fas fa-briefcase"></i> <span id="work-experience-title">Work Experience</span></h2>
+                    <div id="work-experience-items">
+                        </div>
                 </div>
 
                 <div class="education-section mb-8">
-                    <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
-                    <div class="section-item">
-                        <h3>BSc. Management Control and Information Systems Engineering</h3>
-                        <p>Universidad de Chile, Santiago, Chile</p>
-                        <p class="text-sm text-gray-500">2012 - 2018</p>
-                    </div>
+                    <h2 class="section-title"><i class="fas fa-graduation-cap"></i> <span id="education-title">Education</span></h2>
+                    <div id="education-items">
+                        </div>
                 </div>
             </div>
 
             <div class="right-column">
                 <div class="certifications-section mb-8">
-                    <h2 class="section-title"><i class="fas fa-certificate"></i> Certifications & Training</h2>
-                    <div class="section-item">
-                        <h3>Diploma in Cybersecurity Governance, Management, and Audit</h3>
-                        <p>Universidad de Santiago de Chile | Issued Jan 2025</p>
-                    </div>
-                    <div class="section-item">
-                        <h3>Advanced English (IELTS 7.0, C1 CEFR)</h3>
-                        <p>Official Ielts International | 2024</p>
-                    </div>
-                    <div class="section-item">
-                        <h3>Data analysis and management (with Tableau)</h3>
-                        <p>USACH Capacitacion | 2024</p>
-                    </div>
-                    <div class="section-item">
-                        <h3>Microsoft Certified: Azure Fundamentals</h3>
-                        <p>Microsoft | Issued Aug 2023</p>
-                        <p class="text-sm text-gray-500">Credential ID: 3282C3D5C6CB3C30</p>
-                    </div>
-                    <div class="section-item">
-                        <h3>Ubiquiti Enterprise Wireless Admin (UEWA, Wi-fi)</h3>
-                        <p>LK CHILE | 2023</p>
-                    </div>
-                    <div class="section-item">
-                        <h3>Concepts of diversity and inclusion</h3>
-                        <p>COANIL Capacitacion | 2023</p>
-                    </div>
-                    <div class="section-item">
-                        <h3>Chilean Sign Language Level A1</h3>
-                        <p>COANIL Capacitacion | 2023</p>
-                    </div>
+                    <h2 class="section-title"><i class="fas fa-certificate"></i> <span id="certifications-title">Certifications & Training</span></h2>
+                    <div id="certifications-items">
+                        </div>
                 </div>
 
                 <div class="languages-section mb-8">
-                    <h2 class="section-title"><i class="fas fa-language"></i> Language Skills</h2>
+                    <h2 class="section-title"><i class="fas fa-language"></i> <span id="languages-title">Language Skills</span></h2>
                     <div class="section-item">
-                        <p><strong>Spanish:</strong> Native speaker</p>
-                        <p><strong>English:</strong> Fluent (C1 CEFR)</p>
-                        <p><strong>German:</strong> Beginner (A1 CEFR)</p>
-                        <p><strong>Portuguese:</strong> Beginner (A1 CEFR)</p>
+                        <ul id="languages-items">
+                            </ul>
                     </div>
                 </div>
 
                 <div class="computer-skills-section mb-8">
-                    <h2 class="section-title"><i class="fas fa-laptop-code"></i> Computer Skills</h2>
+                    <h2 class="section-title"><i class="fas fa-laptop-code"></i> <span id="computer-skills-title">Computer Skills</span></h2>
                     <div class="section-item">
-                        <p>Windows and Ubuntu user. MS Office (Word, Excel, PowerPoint), Tableau, etc. Certified Wi-fi Admin enables connectivity troubleshooting.</p>
+                        <p id="computer-skills-text"></p>
                     </div>
                 </div>
 
                 <div class="volunteer-section mb-8">
-                    <h2 class="section-title"><i class="fas fa-hands-helping"></i> Volunteer Activities</h2>
+                    <h2 class="section-title"><i class="fas fa-hands-helping"></i> <span id="volunteer-activities-title">Volunteer Activities</span></h2>
                     <div class="section-item">
-                        <ul class="text-sm">
-                            <li>A&O Hostels Frankfurt Ost: Multifunctional Volunteer (room check, breakfast, dinner shifts) | May 2025</li>
-                            <li>Gallinaro Accommodation: Webmaster (Website update, etc.) | May 2025</li>
-                            <li>Pfronten Gastehaus: Construction Renovation Assistant (Furniture Assembly, etc.) | April 2025</li>
-                            <li>Chilean Cryptotechnology Association: Partner (2019-2023)</li>
-                            <li>U. of Chile: Information Systems Teaching Assistant (2015)</li>
-                            <li>U. of Chile: Math Teaching Assistant (2014)</li>
-                            <li>Ong Ayllu: Mathematics Tutor (Santiago, Chile. 2013)</li>
-                            <li>BitUChile, U. of Chile: Content Writer (2012)</li>
-                            <li>Liceo Catolico Atacama: Treasurer of Student Union (2010)</li>
-                            <li>Bangdroid: Co-Founder (Physics Student Club, 2009-2011)</li>
-                        </ul>
+                        <ul id="volunteer-activities-items">
+                            </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        const cvContent = {
+            en: {
+                header: {
+                    title: "Hernan Herrera",
+                    subtitle: "Motivated and friendly professional",
+                    contact: {
+                        location: "Frankfurt am Main, Germany",
+                        phone: "+49 1521 2449054",
+                        email: "herrera.hernan@outlook.com"
+                    }
+                },
+                profile: {
+                    title: "Profile",
+                    text: "Seeking a part-time or full-time position during the peak season to finance a year of study abroad. Possesses strong customer service skills and the ability to work effectively in fast-paced environments."
+                },
+                workExperience: {
+                    title: "Work Experience",
+                    items: [
+                        {
+                            title: "Delivery Driver",
+                            company: "Ubereats, Justo, Rappi | Viña Del Mar, Chile",
+                            period: "11/2024 - 01/2025",
+                            duties: [
+                                "Punctual and reliable delivery of orders.",
+                                "Ensured customer satisfaction through friendly service.",
+                                "Efficient route planning and use of the delivery app."
+                            ]
+                        },
+                        {
+                            title: "Systems Engineer",
+                            company: "Mutual de Seguridad Asesorías | Providencia, Stgo, CL",
+                            period: "10/2023 - 10/2024",
+                            duties: [
+                                "Maintenance and administration of IT systems.",
+                                "Troubleshooting and technical support.",
+                                "Implementation of cybersecurity measures."
+                            ]
+                        },
+                        {
+                            title: "Systems Engineer",
+                            company: "Coanil Foundation | Ñuñoa, Santiago, Chile",
+                            period: "09/2019 - 10/2023",
+                            duties: [
+                                "Responsible for system administration and the operation of the IT infrastructure.",
+                                "Performed system updates and upgrades.",
+                                "Trained employees in the use of IT systems."
+                            ]
+                        },
+                        {
+                            title: "Systems Engineer",
+                            company: "MFO Advisors | Vitacura, Santiago, Chile",
+                            period: "09/2018 - 02/2019",
+                            duties: [
+                                "Migration of whole IT technology to new offices.",
+                                "Administration and maintenance of IT infrastructure."
+                            ]
+                        },
+                        {
+                            title: "Computer Science Course Assistant",
+                            company: "Faculty of Economics and Business - Universidad de Chile | Santiago, Chile",
+                            period: "03/2015 - 07/2015",
+                            duties: [
+                                "Supported the course instructor in student supervision.",
+                                "Conducted tutorials and evaluated student work."
+                            ]
+                        },
+                        {
+                            title: "Sales Executive Claro Hogar",
+                            company: "ECRGROUP for Claro Chile S.A. | Valparaíso, Chile",
+                            period: "01/2015 - 02/2015",
+                            duties: [
+                                "Sale of Claro Hogar products and services.",
+                                "Customer consultation and preparation of offers."
+                            ]
+                        },
+                        {
+                            title: "Mathematics Course Assistant III",
+                            company: "Faculty of Economics and Business - Universidad Chile | Santiago, Chile",
+                            period: "03/2014 - 07/2014",
+                            duties: [
+                                "Supported the course instructor in mathematics.",
+                                "Conducted tutorials and evaluated student work."
+                            ]
+                        },
+                        {
+                            title: "Administrative Assistant",
+                            company: "Restaurant Route 5 | Chañaral, Chile",
+                            period: "03/2011 - 02/2012",
+                            duties: [
+                                "Support in administrative tasks."
+                            ]
+                        },
+                        {
+                            title: "Multifunctional Employee",
+                            company: "Hotel Portal Atacama | Chañaral, Chile",
+                            period: "03/2010 - 02/2011",
+                            duties: [
+                                "Various tasks in hotel operations."
+                            ]
+                        },
+                        {
+                            title: "Seller",
+                            company: "Herrera Bookstore | Chañaral, Chile",
+                            period: "06/2009 - 03/2010",
+                            duties: [
+                                "Sale of books and stationery, customer advice."
+                            ]
+                        }
+                    ]
+                },
+                education: {
+                    title: "Education",
+                    items: [
+                        {
+                            title: "BSc. Management Control and Information Systems Engineering",
+                            institution: "Universidad de Chile, Santiago, Chile",
+                            period: "2012 - 2018"
+                        }
+                    ]
+                },
+                certifications: {
+                    title: "Certifications & Training",
+                    items: [
+                        {
+                            title: "Diploma in Cybersecurity Governance, Management, and Audit",
+                            issuer: "Universidad de Santiago de Chile",
+                            issued: "Jan 2025"
+                        },
+                        {
+                            title: "Advanced English (IELTS 7.0, C1 CEFR)",
+                            issuer: "Official Ielts International",
+                            issued: "2024"
+                        },
+                        {
+                            title: "Data analysis and management (with Tableau)",
+                            issuer: "USACH Capacitacion",
+                            issued: "2024"
+                        },
+                        {
+                            title: "Microsoft Certified: Azure Fundamentals",
+                            issuer: "Microsoft",
+                            issued: "Aug 2023",
+                            credentialId: "3282C3D5C6CB3C30"
+                        },
+                        {
+                            title: "Ubiquiti Enterprise Wireless Admin (UEWA, Wi-fi)",
+                            issuer: "LK CHILE",
+                            issued: "2023"
+                        },
+                        {
+                            title: "Concepts of diversity and inclusion",
+                            issuer: "COANIL Capacitacion",
+                            issued: "2023"
+                        },
+                        {
+                            title: "Chilean Sign Language Level A1",
+                            issuer: "COANIL Capacitacion",
+                            issued: "2023"
+                        }
+                    ]
+                },
+                languages: {
+                    title: "Language Skills",
+                    items: [
+                        "Spanish: Native speaker",
+                        "English: Fluent (C1 CEFR)",
+                        "German: Beginner (A1 CEFR)",
+                        "Portuguese: Beginner (A1 CEFR)"
+                    ]
+                },
+                computerSkills: {
+                    title: "Computer Skills",
+                    text: "Windows and Ubuntu user. MS Office (Word, Excel, PowerPoint), Tableau, etc. Certified Wi-fi Admin enables connectivity troubleshooting."
+                },
+                volunteerActivities: {
+                    title: "Volunteer Activities",
+                    items: [
+                        "A&O Hostels Frankfurt Ost: Multifunctional Volunteer (room check, breakfast, dinner shifts) | May 2025",
+                        "Gallinaro Accommodation: Webmaster (Website update, etc.) | May 2025",
+                        "Pfronten Gastehaus: Construction Renovation Assistant (Furniture Assembly, etc.) | April 2025",
+                        "Chilean Cryptotechnology Association: Partner (2019-2023)",
+                        "U. of Chile: Information Systems Teaching Assistant (2015)",
+                        "U. of Chile: Math Teaching Assistant (2014)",
+                        "Ong Ayllu: Mathematics Tutor (Santiago, Chile. 2013)",
+                        "BitUChile, U. of Chile: Content Writer (2012)",
+                        "Liceo Catolico Atacama: Treasurer of Student Union (2010)",
+                        "Bangdroid: Co-Founder (Physics Student Club, 2009-2011)"
+                    ]
+                }
+            },
+            de: {
+                header: {
+                    title: "Hernan Herrera",
+                    subtitle: "Motivierter und freundlicher Fachmann",
+                    contact: {
+                        location: "Frankfurt am Main, Deutschland",
+                        phone: "+49 1521 2449054",
+                        email: "herrera.hernan@outlook.com"
+                    }
+                },
+                profile: {
+                    title: "Profil",
+                    text: "Motivierter und freundlicher Fachmann, der eine Teilzeit- oder Vollzeitstelle während der Hochsaison sucht, um ein Auslandsstudienjahr zu finanzieren. Besitzt ausgeprägte Kundenservicefähigkeiten und die Fähigkeit, effektiv in schnelllebigen Umgebungen zu arbeiten."
+                },
+                workExperience: {
+                    title: "Berufserfahrung",
+                    items: [
+                        {
+                            title: "Lieferfahrer",
+                            company: "Ubereats, Justo, Rappi | Viña Del Mar, Chile",
+                            period: "11/2024 - 01/2025",
+                            duties: [
+                                "Pünktliche und zuverlässige Zustellung von Bestellungen.",
+                                "Sicherstellung der Kundenzufriedenheit durch freundlichen Service.",
+                                "Effiziente Routenplanung und Nutzung der Liefer-App."
+                            ]
+                        },
+                        {
+                            title: "Systemingenieur",
+                            company: "Mutual de Seguridad Asesorías | Providencia, Stgo, CL",
+                            period: "10/2023 - 10/2024",
+                            duties: [
+                                "Wartung und Verwaltung von IT-Systemen.",
+                                "Fehlerbehebung und technischer Support.",
+                                "Implementierung von Cybersicherheitsmaßnahmen."
+                            ]
+                        },
+                        {
+                            title: "Systemingenieur",
+                            company: "Coanil Foundation | Ñuñoa, Santiago, Chile",
+                            period: "09/2019 - 10/2023",
+                            duties: [
+                                "Verantwortlich für Systemadministration und den Betrieb der IT-Infrastruktur.",
+                                "Durchführung von Systemupdates und -upgrades.",
+                                "Schulung von Mitarbeitern in der Nutzung von IT-Systemen."
+                            ]
+                        },
+                        {
+                            title: "Systemingenieur",
+                            company: "MFO Advisors | Vitacura, Santiago, Chile",
+                            period: "09/2018 - 02/2019",
+                            duties: [
+                                "Migration der gesamten IT-Technologie in neue Büros.",
+                                "Verwaltung und Wartung der IT-Infrastruktur."
+                            ]
+                        },
+                        {
+                            title: "Kursassistent für Informatik",
+                            company: "Fakultät für Wirtschaftswissenschaften - Universidad de Chile | Santiago, Chile",
+                            period: "03/2015 - 07/2015",
+                            duties: [
+                                "Unterstützung des Kursleiters bei der Studierendenbetreuung.",
+                                "Durchführung von Tutorien und Bewertung von studentischen Arbeiten."
+                            ]
+                        },
+                        {
+                            title: "Vertriebsmitarbeiter Claro Hogar",
+                            company: "ECRGROUP for Claro Chile S.A. | Valparaíso, Chile",
+                            period: "01/2015 - 02/2015",
+                            duties: [
+                                "Verkauf von Claro Hogar Produkten und Dienstleistungen.",
+                                "Kundenberatung und Angebotserstellung."
+                            ]
+                        },
+                        {
+                            title: "Mathematik-Kursassistent III",
+                            company: "Fakultät für Wirtschaftswissenschaften - Universidad Chile | Santiago, Chile",
+                            period: "03/2014 - 07/2014",
+                            duties: [
+                                "Unterstützung des Kursleiters in Mathematik.",
+                                "Durchführung von Tutorien und Bewertung von studentischen Arbeiten."
+                            ]
+                        },
+                        {
+                            title: "Verwaltungsassistent",
+                            company: "Restaurant Route 5 | Chañaral, Chile",
+                            period: "03/2011 - 02/2012",
+                            duties: [
+                                "Unterstützung bei administrativen Aufgaben."
+                            ]
+                        },
+                        {
+                            title: "Multifunktionaler Mitarbeiter",
+                            company: "Hotel Portal Atacama | Chañaral, Chile",
+                            period: "03/2010 - 02/2011",
+                            duties: [
+                                "Verschiedene Aufgaben im Hotelbetrieb."
+                            ]
+                        },
+                        {
+                            title: "Verkäufer",
+                            company: "Herrera Bookstore | Chañaral, Chile",
+                            period: "06/2009 - 03/2010",
+                            duties: [
+                                "Verkauf von Büchern und Schreibwaren, Kundenberatung."
+                            ]
+                        }
+                    ]
+                },
+                education: {
+                    title: "Ausbildung",
+                    items: [
+                        {
+                            title: "BSc. Management Control and Information Systems Engineering",
+                            institution: "Universidad de Chile, Santiago, Chile",
+                            period: "2012 - 2018"
+                        }
+                    ]
+                },
+                certifications: {
+                    title: "Zertifizierungen & Weiterbildung",
+                    items: [
+                        {
+                            title: "Diplom in Cybersicherheits-Governance, -Management und -Audit",
+                            issuer: "Universidad de Santiago de Chile",
+                            issued: "Jan 2025"
+                        },
+                        {
+                            title: "Fortgeschrittenes Englisch (IELTS 7.0, C1 CEFR)",
+                            issuer: "Official Ielts International",
+                            issued: "2024"
+                        },
+                        {
+                            title: "Datenanalyse und -management (mit Tableau)",
+                            issuer: "USACH Capacitacion",
+                            issued: "2024"
+                        },
+                        {
+                            title: "Microsoft Certified: Azure Fundamentals",
+                            issuer: "Microsoft",
+                            issued: "Aug 2023",
+                            credentialId: "3282C3D5C6CB3C30"
+                        },
+                        {
+                            title: "Ubiquiti Enterprise Wireless Admin (UEWA, Wi-fi)",
+                            issuer: "LK CHILE",
+                            issued: "2023"
+                        },
+                        {
+                            title: "Konzepte der Vielfalt und Inklusion",
+                            issuer: "COANIL Capacitacion",
+                            issued: "2023"
+                        },
+                        {
+                            title: "Chilenische Gebärdensprache Level A1",
+                            issuer: "COANIL Capacitacion",
+                            issued: "2023"
+                        }
+                    ]
+                },
+                languages: {
+                    title: "Sprachkenntnisse",
+                    items: [
+                        "Spanisch: Muttersprache",
+                        "Englisch: Fließend (C1 CEFR)",
+                        "Deutsch: Anfänger (A1 CEFR)",
+                        "Portugiesisch: Anfänger (A1 CEFR)"
+                    ]
+                },
+                computerSkills: {
+                    title: "Computerkenntnisse",
+                    text: "Windows- und Ubuntu-Benutzer. MS Office (Word, Excel, PowerPoint), Tableau, etc. Zertifizierter Wi-Fi-Administrator ermöglicht die Fehlerbehebung bei Konnektivitätsproblemen."
+                },
+                volunteerActivities: {
+                    title: "Freiwilligenarbeit",
+                    items: [
+                        "A&O Hostels Frankfurt Ost: Multifunktionaler Freiwilliger (Zimmerkontrolle, Frühstücks-, Abendessenschichten) | Mai 2025",
+                        "Gallinaro Accommodation: Webmaster (Website-Update, etc.) | Mai 2025",
+                        "Pfronten Gastehaus: Bau- und Renovierungsassistent (Möbelmontage, etc.) | April 2025",
+                        "Chilenische Kryptotechnologie-Vereinigung: Partner (2019-2023)",
+                        "U. of Chile: Assistent für Informationssysteme (2015)",
+                        "U. of Chile: Mathematik-Assistent (2014)",
+                        "Ong Ayllu: Mathematik-Tutor (Santiago, Chile. 2013)",
+                        "BitUChile, U. de Chile: Content Writer (2012)",
+                        "Liceo Catolico Atacama: Schatzmeister der Studentenvereinigung (2010)",
+                        "Bangdroid: Mitbegründer (Physik-Studentenclub, 2009-2011)"
+                    ]
+                }
+            },
+            es: {
+                header: {
+                    title: "Hernan Herrera",
+                    subtitle: "Profesional motivado y amable",
+                    contact: {
+                        location: "Frankfurt am Main, Alemania",
+                        phone: "+49 1521 2449054",
+                        email: "herrera.hernan@outlook.com"
+                    }
+                },
+                profile: {
+                    title: "Perfil",
+                    text: "Profesional motivado y amable que busca un puesto a tiempo parcial o completo durante la temporada alta para financiar un año de estudios en el extranjero. Posee sólidas habilidades de servicio al cliente y la capacidad de trabajar eficazmente en entornos de ritmo rápido."
+                },
+                workExperience: {
+                    title: "Experiencia Laboral",
+                    items: [
+                        {
+                            title: "Repartidor",
+                            company: "Ubereats, Justo, Rappi | Viña Del Mar, Chile",
+                            period: "11/2024 - 01/2025",
+                            duties: [
+                                "Entrega puntual y fiable de pedidos.",
+                                "Garantía de satisfacción del cliente a través de un servicio amable.",
+                                "Planificación eficiente de rutas y uso de la aplicación de entrega."
+                            ]
+                        },
+                        {
+                            title: "Ingeniero de Sistemas",
+                            company: "Mutual de Seguridad Asesorías | Providencia, Stgo, CL",
+                            period: "10/2023 - 10/2024",
+                            duties: [
+                                "Mantenimiento y administración de sistemas de TI.",
+                                "Resolución de problemas y soporte técnico.",
+                                "Implementación de medidas de ciberseguridad."
+                            ]
+                        },
+                        {
+                            title: "Ingeniero de Sistemas",
+                            company: "Coanil Foundation | Ñuñoa, Santiago, Chile",
+                            period: "09/2019 - 10/2023",
+                            duties: [
+                                "Responsable de la administración de sistemas y la operación de la infraestructura de TI.",
+                                "Realización de actualizaciones y mejoras del sistema.",
+                                "Capacitación de empleados en el uso de sistemas de TI."
+                            ]
+                        },
+                        {
+                            title: "Ingeniero de Sistemas",
+                            company: "MFO Advisors | Vitacura, Santiago, Chile",
+                            period: "09/2018 - 02/2019",
+                            duties: [
+                                "Migración de toda la tecnología de TI a nuevas oficinas.",
+                                "Administración y mantenimiento de la infraestructura de TI."
+                            ]
+                        },
+                        {
+                            title: "Asistente de Cátedra de Ciencias de la Computación",
+                            company: "Facultad de Economía y Negocios - Universidad de Chile | Santiago, Chile",
+                            period: "03/2015 - 07/2015",
+                            duties: [
+                                "Apoyó al instructor del curso en la supervisión de estudiantes.",
+                                "Condujo tutorías y evaluó el trabajo de los estudiantes."
+                            ]
+                        },
+                        {
+                            title: "Ejecutivo de Ventas Claro Hogar",
+                            company: "ECRGROUP para Claro Chile S.A. | Valparaíso, Chile",
+                            period: "01/2015 - 02/2015",
+                            duties: [
+                                "Venta de productos y servicios de Claro Hogar.",
+                                "Consulta al cliente y preparación de ofertas."
+                            ]
+                        },
+                        {
+                            title: "Asistente de Cátedra de Matemáticas III",
+                            company: "Facultad de Economía y Negocios - Universidad Chile | Santiago, Chile",
+                            period: "03/2014 - 07/2014",
+                            duties: [
+                                "Apoyó al instructor del curso en matemáticas.",
+                                "Condujo tutorías y evaluó el trabajo de los estudiantes."
+                            ]
+                        },
+                        {
+                            title: "Asistente Administrativo",
+                            company: "Restaurant Ruta 5 | Chañaral, Chile",
+                            period: "03/2011 - 02/2012",
+                            duties: [
+                                "Apoyo en tareas administrativas."
+                            ]
+                        },
+                        {
+                            title: "Empleado Multifuncional",
+                            company: "Hotel Portal Atacama | Chañaral, Chile",
+                            period: "03/2010 - 02/2011",
+                            duties: [
+                                "Diversas tareas en operaciones hoteleras."
+                            ]
+                        },
+                        {
+                            title: "Vendedor",
+                            company: "Librería Herrera | Chañaral, Chile",
+                            period: "06/2009 - 03/2010",
+                            duties: [
+                                "Venta de libros y papelería, asesoramiento al cliente."
+                            ]
+                        }
+                    ]
+                },
+                education: {
+                    title: "Educación",
+                    items: [
+                        {
+                            title: "Licenciatura en Ingeniería en Control de Gestión y Sistemas de Información",
+                            institution: "Universidad de Chile, Santiago, Chile",
+                            period: "2012 - 2018"
+                        }
+                    ]
+                },
+                certifications: {
+                    title: "Certificaciones y Formación",
+                    items: [
+                        {
+                            title: "Diplomado en Gobernanza, Gestión y Auditoría de Ciberseguridad",
+                            issuer: "Universidad de Santiago de Chile",
+                            issued: "Ene 2025"
+                        },
+                        {
+                            title: "Inglés Avanzado (IELTS 7.0, C1 CEFR)",
+                            issuer: "Official Ielts International",
+                            issued: "2024"
+                        },
+                        {
+                            title: "Análisis y Gestión de Datos (con Tableau)",
+                            issuer: "USACH Capacitación",
+                            issued: "2024"
+                        },
+                        {
+                            title: "Microsoft Certified: Azure Fundamentals",
+                            issuer: "Microsoft",
+                            issued: "Ago 2023",
+                            credentialId: "3282C3D5C6CB3C30"
+                        },
+                        {
+                            title: "Administrador Inalámbrico Empresarial Ubiquiti (UEWA, Wi-fi)",
+                            issuer: "LK CHILE",
+                            issued: "2023"
+                        },
+                        {
+                            title: "Conceptos de Diversidad e Inclusión",
+                            issuer: "COANIL Capacitación",
+                            issued: "2023"
+                        },
+                        {
+                            title: "Lengua de Señas Chilena Nivel A1",
+                            issuer: "COANIL Capacitación",
+                            issued: "2023"
+                        }
+                    ]
+                },
+                languages: {
+                    title: "Habilidades Lingüísticas",
+                    items: [
+                        "Español: Nativo",
+                        "Inglés: Fluido (C1 CEFR)",
+                        "Alemán: Principiante (A1 CEFR)",
+                        "Portugués: Principiante (A1 CEFR)"
+                    ]
+                },
+                computerSkills: {
+                    title: "Habilidades Informáticas",
+                    text: "Usuario de Windows y Ubuntu. MS Office (Word, Excel, PowerPoint), Tableau, etc. Administrador de Wi-Fi certificado permite la resolución de problemas de conectividad."
+                },
+                volunteerActivities: {
+                    title: "Actividades Voluntarias",
+                    items: [
+                        "A&O Hostels Frankfurt Ost: Voluntario Multifuncional (revisión de habitaciones, turnos de desayuno, cena) | Mayo 2025",
+                        "Gallinaro Accommodation: Webmaster (actualización de sitio web, etc.) | Mayo 2025",
+                        "Pfronten Gastehaus: Asistente de Renovación de Construcción (ensamblaje de muebles, etc.) | Abril 2025",
+                        "Asociación Chilena de Criptotecnología: Socio (2019-2023)",
+                        "U. de Chile: Asistente de Cátedra de Sistemas de Información (2015)",
+                        "U. de Chile: Asistente de Cátedra de Matemáticas (2014)",
+                        "Ong Ayllu: Tutor de Matemáticas (Santiago, Chile. 2013)",
+                        "BitUChile, U. de Chile: Redactor de Contenido (2012)",
+                        "Liceo Católico Atacama: Tesorero de la Unión Estudiantil (2010)",
+                        "Bangdroid: Co-Fundador (Club de Estudiantes de Física, 2009-2011)"
+                    ]
+                }
+            }
+        };
+
+        // Function to update the content based on the selected language
+        function updateContent(lang) {
+            const content = cvContent[lang];
+
+            // Header
+            document.getElementById('header-title').textContent = content.header.title;
+            document.getElementById('header-subtitle').textContent = content.header.subtitle;
+            document.getElementById('contact-location').textContent = content.header.contact.location;
+            document.getElementById('contact-phone').textContent = content.header.contact.phone;
+            document.getElementById('contact-email').textContent = content.header.contact.email;
+
+            // Profile
+            document.getElementById('profile-title').textContent = content.profile.title;
+            document.getElementById('profile-text').textContent = content.profile.text;
+
+            // Work Experience
+            document.getElementById('work-experience-title').textContent = content.workExperience.title;
+            const workExperienceItemsContainer = document.getElementById('work-experience-items');
+            workExperienceItemsContainer.innerHTML = ''; // Clear existing items
+            content.workExperience.items.forEach(item => {
+                const div = document.createElement('div');
+                div.className = 'section-item';
+                div.innerHTML = `
+                    <h3>${item.title}</h3>
+                    <p>${item.company}</p>
+                    <p class="text-sm text-gray-500">${item.period}</p>
+                    <ul class="text-sm">
+                        ${item.duties.map(duty => `<li>${duty}</li>`).join('')}
+                    </ul>
+                `;
+                workExperienceItemsContainer.appendChild(div);
+            });
+
+            // Education
+            document.getElementById('education-title').textContent = content.education.title;
+            const educationItemsContainer = document.getElementById('education-items');
+            educationItemsContainer.innerHTML = ''; // Clear existing items
+            content.education.items.forEach(item => {
+                const div = document.createElement('div');
+                div.className = 'section-item';
+                div.innerHTML = `
+                    <h3>${item.title}</h3>
+                    <p>${item.institution}</p>
+                    <p class="text-sm text-gray-500">${item.period}</p>
+                `;
+                educationItemsContainer.appendChild(div);
+            });
+
+            // Certifications & Training
+            document.getElementById('certifications-title').textContent = content.certifications.title;
+            const certificationsItemsContainer = document.getElementById('certifications-items');
+            certificationsItemsContainer.innerHTML = ''; // Clear existing items
+            content.certifications.items.forEach(item => {
+                const div = document.createElement('div');
+                div.className = 'section-item';
+                div.innerHTML = `
+                    <h3>${item.title}</h3>
+                    <p>${item.issuer} | ${item.issued}</p>
+                    ${item.credentialId ? `<p class="text-sm text-gray-500">Credential ID: ${item.credentialId}</p>` : ''}
+                `;
+                certificationsItemsContainer.appendChild(div);
+            });
+
+            // Language Skills
+            document.getElementById('languages-title').textContent = content.languages.title;
+            const languagesItemsContainer = document.getElementById('languages-items');
+            languagesItemsContainer.innerHTML = ''; // Clear existing items
+            content.languages.items.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = item;
+                languagesItemsContainer.appendChild(li);
+            });
+
+            // Computer Skills
+            document.getElementById('computer-skills-title').textContent = content.computerSkills.title;
+            document.getElementById('computer-skills-text').textContent = content.computerSkills.text;
+
+            // Volunteer Activities
+            document.getElementById('volunteer-activities-title').textContent = content.volunteerActivities.title;
+            const volunteerActivitiesItemsContainer = document.getElementById('volunteer-activities-items');
+            volunteerActivitiesItemsContainer.innerHTML = ''; // Clear existing items
+            content.volunteerActivities.items.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = item;
+                volunteerActivitiesItemsContainer.appendChild(li);
+            });
+
+            // Update active button class
+            document.querySelectorAll('.lang-button').forEach(button => {
+                button.classList.remove('active');
+            });
+            document.querySelector(`.lang-button[data-lang="${lang}"]`).classList.add('active');
+        }
+
+        // Add event listeners to language buttons
+        document.querySelectorAll('.lang-button').forEach(button => {
+            button.addEventListener('click', (event) => {
+                const lang = event.target.dataset.lang;
+                updateContent(lang);
+            });
+        });
+
+        // Initial load: display English content
+        document.addEventListener('DOMContentLoaded', () => {
+            updateContent('en');
+        });
+    </script>
 </body>
 </html>
